@@ -70,7 +70,12 @@ public class Restaurant {
         return name;
     }
     public int displayTotalOrderValue(List<String> menuItems){
-     return -1;
+        int totalAmount=0;
+        for(String item: menuItems) {
+
+            totalAmount=totalAmount+this.findItemByName(item).getPrice();
+        }
+        return totalAmount;
     }
 
 }
