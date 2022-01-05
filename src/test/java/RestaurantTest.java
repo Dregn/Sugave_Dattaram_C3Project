@@ -66,4 +66,16 @@ class RestaurantTest {
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void return_total_order_value_of_selected_menu_items(){
+        List<String> menu = new ArrayList<String>();
+        menu.add("Sweet corn soup");
+
+        assertEquals(119,restaurant.displayTotalOrderValue(menu));
+    }
+    @Test
+    public void return_zero_order_value_of_when_no_item_is_selected_from_menu_items(){
+        List<String> menu = new ArrayList<String>();
+        assertEquals(0,restaurant.displayTotalOrderValue(menu));
+    }
 }
